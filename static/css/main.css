@@ -6,7 +6,6 @@ main {
 /* Header */
 
 .global-header {
-    background-image: url(/images/bg.jpg);
     background-size: cover;
 }
 
@@ -14,7 +13,7 @@ main {
     position: relative;
     padding-bottom: 1px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.9);
     color: rgba(255, 255, 255, 0.9);
 }
 
@@ -183,11 +182,11 @@ a.btn-back {
 }
 
 .author-avatar img {
-    max-width: 100px;
-    max-height: 100px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 }
 
 .author-contact {
@@ -243,6 +242,5 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 article section img {
     max-width: 100%;
     height: auto;
-    margin: 13px auto;
 }
 

@@ -1,11 +1,21 @@
 {{ partial "header.html" . }}
 <div class="article-list">
   {{ range $index, $page := .Site.Pages }}
-  {{ if ne $index 0 }}
+  {{ .Render "li" }}
   <hr/>
   {{ end }}
-  {{ .Render "li" }}
-  {{ end }}
+  <ul class="pager">
+    {{ if .Paginator.HasNext }}
+    <li class="previous"><a href="{{ .Paginator.Next.Url }}"><span aria-hidden="true">&larr;</span> Older</a></li>
+    {{ else }}
+    <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+    {{ end }}
+    {{ if .Paginator.HasPrev }}
+    <li class="next"><a href="{{ .Paginator.Prev.Url }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+    {{ else }}
+    <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+    {{ end }}
+  </ul>
 </div>
 {{ partial "footer.html" . }}
 
