@@ -244,3 +244,28 @@ article section img {
     height: auto;
 }
 
+.post-custom-share-buttons iframe {
+  margin: 0;
+}
+
+.post-custom-share-buttons .twitter-share-button,
+.post-custom-share-buttons .fb-like,
+.post-custom-share-buttons .pocket-btn,
+.post-custom-share-buttons .hatena-bookmark-button-frame {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  vertical-align: top;
+}
+
+@media only screen and (max-width: 500px) {
+  .post-custom-share-buttons .twitter-share-button,
+  .post-custom-share-buttons .fb-like,
+  .post-custom-share-buttons .pocket-btn,
+  .post-custom-share-buttons .hatena-bookmark-button-frame {
+    margin: 0;
+  }
+}
+
+.post-custom-share-buttons #fb-root {
+  display: none;
+}
