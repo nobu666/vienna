@@ -38,7 +38,7 @@
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico" />
   <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}images/apple-touch-icon.png" />
   {{ if eq .URL "/" }}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
   {{ end }}
 </head>
 <body>
@@ -57,8 +57,8 @@
         &nbsp;Home
       </a>
       {{ end }}
-      {{ with .RSSLink }}
-      <a href="{{ . }}" class="btn-header btn-subscribe hidden-xs">
+      {{ with .RSSlink }}
+      <a href="/feed.xml" class="btn-header btn-subscribe hidden-xs">
         <i class="fa fa-rss" aria-hidden="true"></i>
         &nbsp;Subscribe
       </a>
